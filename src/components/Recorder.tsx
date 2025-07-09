@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 export const Recorder = ({ onText }: { onText: (text: string) => void }) => {
-  const [isRecording, setIsRecording] = useState(false);
+  const [isRecording,setIsRecording] = useState(false);
 
   const startRecognition = () => {
     const SpeechRecognition =
@@ -59,6 +59,7 @@ recognition.onerror = (event: any) => {
   };
 
   return (
+{isRecording ? "録音中...":"停止中"}
     <button
       onClick={startRecognition}
       className="text-sm bg-green-600 text-white px-3 py-1 rounded"
