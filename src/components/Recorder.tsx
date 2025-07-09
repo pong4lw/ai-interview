@@ -59,7 +59,7 @@ recognition.onerror = (event: any) => {
   };
 
   return (
-{isRecording ? "録音中...":"停止中"}
+<p>{isRecording ? "録音中...":"停止中"}</p>
     <button
       onClick={startRecognition}
       className="text-sm bg-green-600 text-white px-3 py-1 rounded"
