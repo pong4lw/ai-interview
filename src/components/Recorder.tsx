@@ -59,12 +59,14 @@ recognition.onerror = (event: any) => {
   };
 
   return (
-<p>{isRecording ? "録音中...":"停止中"}</p>
-    <button
-      onClick={startRecognition}
-      className="text-sm bg-green-600 text-white px-3 py-1 rounded"
-    >
-      🎙 音声で回答
-    </button>
+    <div>
+      <p>{isRecording ? "録音中..." : "停止中"}</p>
+      <button
+        onClick={startRecognition}
+        className="text-sm bg-green-600 text-white px-3 py-1 rounded"
+      >
+        🎙 音声で回答
+      </button>
+    </div>
   );
 };
